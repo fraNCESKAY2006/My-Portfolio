@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery: LinguaLearn</title>
+  <style>
+    /* Base colors and layout */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #050816;
+      color: #d1d5db;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    /* Back button */
+    .back-button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.125rem;
+      color: #9ca3af;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .back-button:hover {
+      color: #ffffff;
+    }
+
+    .back-button svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    /* Title */
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .royal-gradient {
+      background: linear-gradient(to right, #6a5af9, #8a6eff, #a88bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Description */
+    p {
+      margin-top: 1rem;
+      max-width: 700px;
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+
+    /* Gallery grid */
+    .gallery {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .gallery-item {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    /* Glow text effect */
+    .glowing-text {
+      text-shadow: 0 0 10px rgba(150, 130, 255, 0.7);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="back-button" onclick="history.back()">
+      <!-- Arrow icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0L2.586 11H18a1 1 0 110 2H2.586l3.707 3.707a1 1 0 01-1.414 1.414l-5.414-5.414a1 1 0 010-1.414l5.414-5.414a1 1 0 011.414 1.414L2.586 9H18a1 1 0 110 2H2.586l3.707 3.707z" clip-rule="evenodd" />
+      </svg>
+      Back to Portfolio
+    </button>
+
+    <h1 class="glowing-text">
+      Gallery: <span class="royal-gradient">Crystal Cleaners Website</span>
+    </h1>
+
+    <p>A modern cleaning service website, with customer booking and elegant service showcase.</p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="/assets/images/crystalclean1.png" alt="LinguaLearn screenshot 1">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/images/crystalclean2.png" alt="LinguaLearn screenshot 2">
+      </div>
+
+      <div class="gallery-item">
+        <img src="/assets/images/crystalclean3.png" alt="LinguaLearn screenshot 2">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
